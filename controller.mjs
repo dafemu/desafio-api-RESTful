@@ -21,5 +21,7 @@ export function setProducto(objProducto) {
 }
 
 export function borrarProducto(id){
-    return productos.filter(prod => prod.id !== id);
+    const productosNuevos = productos.filter(prod => prod.id !== id);
+    productos = productosNuevos;
+    return productos;
 }
